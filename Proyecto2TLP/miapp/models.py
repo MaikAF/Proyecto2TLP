@@ -20,7 +20,7 @@ CAT_CHOICES = [('C','Comunidad USM'),
                 ('E','Estudiante'),
                 ('P','Profesor'), 
                ('J',"Jefe de carrera"), ]
-
+#clase
 
 class Evento(models.Model):
     id = models.BigAutoField(primary_key=True)
