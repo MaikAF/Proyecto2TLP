@@ -27,7 +27,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include(router_evento.urls)),
     path('login/', include('django.contrib.auth.urls')),
-    path('prueba1/', views.prueba1, name='prueba1'),
-    path('prueba2/', views.prueba2, name='prueba2'),
     
 ]
