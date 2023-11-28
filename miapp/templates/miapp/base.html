@@ -46,7 +46,7 @@
           <li>User: {{ user.get_username }}</li>
           <li><a href="{% url 'logout' %}?next={{ request.path }}">Logout</a></li>
           {% for group in user.groups.all %}
-              {% if group.name == 'Profesor' %}
+              {% if group.name == 'Profesor' or group.name == 'Jefe de carrera' %}
                   <li>Es profe</li>
               {% else %}
                   <li>No es profe</li>
