@@ -17,11 +17,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from miapp import views
+from django.http import HttpResponse
 
 from api.urls import router_evento
 
 urlpatterns = [
-    path('', views.home),
+    
+
+    path('', views.home, name='home'),
     path('admin/', admin.site.urls),
     path('api/', include(router_evento.urls))
 

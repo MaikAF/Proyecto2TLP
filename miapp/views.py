@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.http import HttpResponse
 
 from django.shortcuts import render
 from miapp.models import Evento
@@ -47,4 +48,9 @@ def ModificarEvento(request, pk):
         return HttpResponse(status=204)
 
 def home(request):
-    return render(request, 'miapp/base.html', name='base')
+
+    data = {
+        'title': 'Inicio',
+    }
+
+    return render(request, 'miapp/base.html', data)
