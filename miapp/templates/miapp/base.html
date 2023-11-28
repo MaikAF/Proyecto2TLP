@@ -57,7 +57,7 @@
                 <div class="card border-success mb-3 h-100" style="max-width: 35rem;">
                   <div class="card-header">Header</div>
                   <div class="card-body text-success">
-                    <h5 class="card-title">Success card title</h5>
+                    <h5 class="card-title">card title</h5>
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                   </div>
                 </div>  
@@ -68,7 +68,7 @@
                 <div class="card border-danger mb-3 h-100" style="max-width: 35rem;">
                   <div class="card-header">Header</div>
                   <div class="card-body text-danger">
-                    <h5 class="card-title">Danger card title</h5>
+                    <h5 class="card-title">card title</h5>
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                   </div>
                 </div>
@@ -77,7 +77,7 @@
                 <div class="card border-success mb-3 h-100" style="max-width: 35rem;">
                   <div class="card-header">Header</div>
                   <div class="card-body text-success">
-                    <h5 class="card-title">Success card title</h5>
+                    <h5 class="card-title">card title</h5>
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                   </div>
                 </div>
@@ -97,6 +97,32 @@
 
     {% endblock %}
 
+
+    <div id="calendario">
+      <div class="row">
+          <h2>Actividades</h2>
+          <table class="table">
+              <thead>
+                  <tr>
+                      <th scope="col">Hito</th>
+                      <th scope="col">Fecha inicio</th>
+                      <th scope="col">Fecha termino</th>
+                      <th scope="col">Tipo</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  {% for e in evento %}
+                      <tr>
+                          <td>{{ e.titulo }}</td>
+                          <td>{{ e.fecha_inicio }}</td>
+                          <td>{{ e.fecha_termino }}</td>
+                          <td>{{ e.tipo }}</td>
+                      </tr>
+                  {% endfor %}
+              </tbody>
+          </table>
+      </div>
+    </div>
 
 
     <footer>
