@@ -11,12 +11,12 @@ from rest_framework.parsers import JSONParser
 
 
 def home(request):
-
-    evento = Evento.objects.all()
+    
+    eventos = Evento.objects.all()
 
     data = {
         'title': 'Inicio',
-        'evento': evento,
+        'evento': eventos,
     }
 
-    return render(request, 'miapp/base.html', data)
+    return render(request, 'miapp/tabla.html', data)

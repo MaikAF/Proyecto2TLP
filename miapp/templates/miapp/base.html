@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Calendario USM</title>
     <link rel="stylesheet" href="{% static 'miapp/css/bootstrap.css' %}"/>
     <link rel="stylesheet" href="{% static 'miapp/css/estilos.css' %}"/>
 </head>
@@ -18,11 +18,13 @@
     </div>
 
     <div class="fondo d-flex justify-content-center align-items-center">
-        <h1 class="text-white">forniute</h1>
+        <h1 class="text-white">fornite</h1>
 
     </div>
 
+    {% block content %}
 
+    {% endblock %}
 
 
     <script src="{% static 'js/bootstrap.js' %}"></script>  
