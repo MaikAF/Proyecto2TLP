@@ -19,5 +19,5 @@ def home(request):
         'evento': eventos,
     }
 
-    return render(request, 'miapp/tabla.html', data)
+    return render(request, 'miapp/base.html', data)
 

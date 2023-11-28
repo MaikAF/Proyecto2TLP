@@ -10,15 +10,15 @@
 </head>
 <body>
     <div id="navegacion">
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <nav class="navbar navbar-expand-lg custom-navbar">
           <div class="container-fluid">
             <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav">
                 <li class="nav-item">
-                  <a class="nav-link" href="{% url 'home' %}">Inicio</a>
+                  <a class="nav-link text-white" href="{% url 'home' %}">Inicio</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="{% url 'admin:index' %}">Administración</a>
+                  <a class="nav-link text-white" href="{% url 'admin:index' %}">Administración</a>
                 </li>
               </ul>
             </div>
@@ -40,8 +40,9 @@
     </div>
     <ul class="sidebar-nav">
 
-      …
+      
   
+<<<<<<< HEAD
       {% if user.is_authenticated %}
           <li>User: {{ user.get_username }}</li>
           <li><a href="{% url 'logout' %}?next={{ request.path }}">Logout</a></li>
@@ -56,12 +57,89 @@
       <li><a href="{% url 'login' %}?next={{ request.path }}">Login</a></li>
       {% endif %}
     
+=======
+     {% if user.is_authenticated %}
+       <li>User: {{ user.get_username }}</li>
+       <li><a href="{% url 'logout' %}?next={{ request.path }}">Cerrar sesion</a></li>
+       {%for group in user.groups.all%}
+          {% if group.name == 'Profesor' %}
+
+          <h3>Proximos eventos de su rol</h3>
+          <p></p>
+          
+          <div class="d-flex justify-content-center align-items-center">
+            <div id="cards" class="row row-cols-1 row-cols-md-3 g-5">
+              <div id="card1" class="col">
+                <div class="card border-success mb-3 h-100" style="max-width: 35rem;">
+                  <div class="card-header">Header</div>
+                  <div class="card-body text-success">
+                    <h5 class="card-title">card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  </div>
+                </div>  
+              </div>
+
+
+              <div id="card2" class="col">
+                <div class="card border-danger mb-3 h-100" style="max-width: 35rem;">
+                  <div class="card-header">Header</div>
+                  <div class="card-body text-danger">
+                    <h5 class="card-title">card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  </div>
+                </div>
+              </div>
+              <div id="card3" class="col">
+                <div class="card border-success mb-3 h-100" style="max-width: 35rem;">
+                  <div class="card-header">Header</div>
+                  <div class="card-body text-success">
+                    <h5 class="card-title">card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          {%else%}
+              <li>No tiene acceso</li>
+          {%endif%}
+       {%endfor%}
+     {% else %}
+       <li><a href="{% url 'login' %}?next={{ request.path }}">Iniciar sesión</a></li>
+     {% endif %}
+>>>>>>> 4ba3b2b1b3515eda13a3bb41079dbfe2b353f15a
     </ul>
   
     {% block content %}
 
     {% endblock %}
 
+
+    <div id="calendario">
+      <div class="row">
+          <h2>Actividades</h2>
+          <table class="table">
+              <thead>
+                  <tr>
+                      <th scope="col">Hito</th>
+                      <th scope="col">Fecha inicio</th>
+                      <th scope="col">Fecha termino</th>
+                      <th scope="col">Tipo</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  {% for e in evento %}
+                      <tr>
+                          <td>{{ e.titulo }}</td>
+                          <td>{{ e.fecha_inicio }}</td>
+                          <td>{{ e.fecha_termino }}</td>
+                          <td>{{ e.tipo }}</td>
+                      </tr>
+                  {% endfor %}
+              </tbody>
+          </table>
+      </div>
+    </div>
 
 
     <footer>

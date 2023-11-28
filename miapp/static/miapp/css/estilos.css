@@ -25,3 +25,17 @@ footer{
     color: black;
     font-size: x-large;
 }
+
+h3{
+    text-align: center;
+}
+
+
+#cards{
+    margin-right: 20px;
+}
+
+.custom-navbar{
+    background-color: #004B85;
+    
+}
