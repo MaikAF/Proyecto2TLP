@@ -1,0 +1,53 @@
+{% extends 'miapp/base.html' %}
+
+{% block content %}
+
+<div id="calendario">
+    <div class="row">
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Hito</th>
+                <th scope="col">Fecha inicio</th>
+                <th scope="col">Fecha termino</th>
+                <th scope="col">Tipo</th>
+              </tr>
+            </thead>
+            <tbody>
+                {% for c in eventos %}
+                    <tr>
+                    <th scope="row"></th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                    </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}
