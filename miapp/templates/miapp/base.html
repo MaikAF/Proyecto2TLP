@@ -12,19 +12,31 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <img  class="img-fluid" src="static/miapp/imagenes/usm.png" alt="">
+                <img id="logo"  class="img-fluid" src="static/miapp/imagenes/usm.png" alt="">
             </div>
         </div>
     </div>
 
     <div class="fondo d-flex justify-content-center align-items-center">
-        <h1 class="text-white">fornite</h1>
+        <h1 class="text-white">Calendario de Actividades 2023</h1>
 
     </div>
 
     {% block content %}
 
     {% endblock %}
+
+
+    <footer>
+        <container-fluid>
+            <div class="text-center p-3" style="background-color: #F7AE00">
+            © 2023
+            </div>
+        </container-fluid>
+
+    </footer>
+
+
 
 
     <script src="{% static 'js/bootstrap.js' %}"></script>  

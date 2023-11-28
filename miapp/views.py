@@ -20,3 +20,5 @@ def home(request):
     }
 
     return render(request, 'miapp/tabla.html', data)
+
+

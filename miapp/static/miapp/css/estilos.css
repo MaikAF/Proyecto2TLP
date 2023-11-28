@@ -12,4 +12,18 @@
 
 h2{
     text-align: center;
+    background-color: #004b85;
+    color: white;
+    
+}
+
+#logo{
+    align-items: baseline;
+}
+
+footer{
+    background-color: #F7AE00;
+    padding: 50px;
+    color: black;
+    font-size: x-large;
 }
