@@ -1,0 +1,7 @@
+.fondo{
+    background-image: url(/static/miapp/imagenes/calendario.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 40vh;
+}
