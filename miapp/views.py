@@ -7,4 +7,4 @@ def home(request):
         'title': 'Inicio',
     }
 
-    return render(request, 'templates/base.html', data)
+    return render(request, 'miapp/base.html', data)
