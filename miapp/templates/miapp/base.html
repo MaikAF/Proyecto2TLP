@@ -42,22 +42,6 @@
 
       
   
-<<<<<<< HEAD
-      {% if user.is_authenticated %}
-          <li>User: {{ user.get_username }}</li>
-          <li><a href="{% url 'logout' %}?next={{ request.path }}">Logout</a></li>
-          {% for group in user.groups.all %}
-              {% if group.name == 'Profesor' or group.name == 'Jefe de carrera' %}
-                  <li>Es profe</li>
-              {% else %}
-                  <li>No es profe</li>
-              {% endif %}
-          {% endfor %}
-      {% else %}
-      <li><a href="{% url 'login' %}?next={{ request.path }}">Login</a></li>
-      {% endif %}
-    
-=======
      {% if user.is_authenticated %}
        <li>User: {{ user.get_username }}</li>
        <li><a href="{% url 'logout' %}?next={{ request.path }}">Cerrar sesion</a></li>
@@ -107,14 +91,13 @@
      {% else %}
        <li><a href="{% url 'login' %}?next={{ request.path }}">Iniciar sesión</a></li>
      {% endif %}
->>>>>>> 4ba3b2b1b3515eda13a3bb41079dbfe2b353f15a
     </ul>
   
     {% block content %}
 
     {% endblock %}
 
-
+    #calenmdario
     <div id="calendario">
       <div class="row">
           <h2>Actividades</h2>
