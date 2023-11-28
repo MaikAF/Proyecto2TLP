@@ -18,14 +18,18 @@ from django.contrib import admin
 from django.urls import path, include
 from miapp import views
 from django.http import HttpResponse
-
+from django.shortcuts import redirect
 from api.urls import router_evento
 
-urlpatterns = [
-    
 
+urlpatterns = [
     path('', views.home, name='home'),
     path('admin/', admin.site.urls),
-    path('api/', include(router_evento.urls))
+    path('api/', include(router_evento.urls)),
+    path('login/', include('django.contrib.auth.urls')),
+    path('prueba1/', views.prueba1, name='prueba1'),
+    path('prueba2/', views.prueba2, name='prueba2'),
+    
+    
 
 ]

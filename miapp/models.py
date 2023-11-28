@@ -16,10 +16,6 @@ TIPO_CHOICES = [('V', 'Vacaciones'),
                 ('O','OAI'), 
                 ]
 
-CAT_CHOICES = [('C','Comunidad USM'),
-                ('E','Estudiante'),
-                ('P','Profesor'), 
-               ('J',"Jefe de carrera"), ]
 #clase
 
 class Evento(models.Model):

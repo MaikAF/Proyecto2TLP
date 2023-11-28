@@ -20,3 +20,19 @@ def home(request):
     }
 
     return render(request, 'miapp/tabla.html', data)
+
+def prueba1(request):
+
+    data = {
+        'title': 'prueba 1',
+    }
+
+    return render(request, 'miapp/prueba1.html', data)
+
+def prueba2(request):
+
+    data = {
+        'title': 'prueba 2',
+    }
+
+    return render(request, 'miapp/prueba2.html', data)
